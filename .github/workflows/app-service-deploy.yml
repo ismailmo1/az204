@@ -62,4 +62,4 @@ jobs:
         with:
           app-name: "kind-sea-21a42c2221014f5dacaffde2f3a84940"
           slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EAC8C417274A42AAA43B63F1F24D7BAD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
