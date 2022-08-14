@@ -15,3 +15,13 @@ $ az webapp config set --resource-group $RESOURCE_GROUP --name $APP_NAME --start
 ```
 
 To setup CI/CD with github actions, use the `azure/webapps-deploy` action and add publish profile secret to the repository (can be downloaded from the [portal](https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel#configure-the-github-secret))
+
+## Function Apps
+
+Durable function bootstrapped with the [VS Code Functions Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) `Azure Functions` commands (from the command palette).
+
+Minimum three functions needed for durable function:
+
+1. Start Function - normal function with a trigger (e.g. HTTP)
+2. Orchestrator - calls the activity functions
+3. Activity Functions(s) - do the actual work
