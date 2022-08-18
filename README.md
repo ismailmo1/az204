@@ -25,3 +25,19 @@ Minimum three functions needed for durable function:
 1. Start Function - normal function with a trigger (e.g. HTTP)
 2. Orchestrator - calls the activity functions
 3. Activity Functions(s) - do the actual work
+
+## Cosmos DB
+
+Cosmos DB resource created via portal, copy URI and keys from Keys tab in Cosmos account portal.
+
+To use cosmos package:
+
+`pip install --pre azure-cosmos`
+
+Key components to interact with cosmos:
+
+1. `CosmosClient` -> cosmosDB account interface, can create database with client i.e. `client.create_database()`
+2. `DatabaseProxy` -> database interface, create containers i.e. `db.create_container()`
+3. `ContainerProxy` -> container interface, CRUD actions on container
+
+Request charges can be retrieved from response header `'x-ms-request-charge'`
